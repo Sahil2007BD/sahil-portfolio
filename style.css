@@ -313,6 +313,7 @@ animation:blink 1s infinite;
 .page-wrapper{
 flex-direction:column;
 padding:20px;
+width:95%;
 }
 
 .side1,
@@ -320,8 +321,16 @@ padding:20px;
 width:100%;
 }
 
+.navbar{
+padding:15px 20px;
+}
+
 .hero h1{
-font-size:40px;
+font-size:38px;
+}
+
+.hero p{
+font-size:16px;
 }
 
 }
