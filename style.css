@@ -44,6 +44,12 @@ html, body{
     box-shadow:0 8px 25px rgba(0,0,0,0.08);
 }
 
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
 .logo{
     font-size:22px;
     font-weight:700;
@@ -53,13 +59,11 @@ html, body{
 .nav-links{
     display:flex;
     gap:25px;
-    align-items:center;
     list-style:none;
 }
 
 .nav-links a{
     position:relative;
-    margin-left:30px;
     font-weight:500;
     text-decoration:none;
     color:#222;
@@ -439,7 +443,20 @@ transform:translateY(0);
 
 
 
+#theme-toggle{
+background:transparent;
+border:1px solid #d1d5db;
+padding:6px 10px;
+border-radius:8px;
+cursor:pointer;
+font-size:16px;
+transition:all 0.3s ease;
+margin-left:10px;
+}
 
+#theme-toggle:hover{
+background:#e5e7eb;
+}
 
 
 
