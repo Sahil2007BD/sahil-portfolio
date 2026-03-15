@@ -97,6 +97,8 @@ html, body{
     width:100%;
     
     background:linear-gradient(135deg,#eef2f7,#f8fafc);
+    position:relative;
+    overflow:hidden;
 }
 
 @keyframes fadeIn{
