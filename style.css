@@ -1,3 +1,7 @@
+body{
+transition:background 0.4s,color 0.4s;
+}
+
 html{
 scroll-behavior:smooth;
 }
@@ -432,3 +436,38 @@ transition:all 0.8s ease;
 opacity:1;
 transform:translateY(0);
 }
+
+
+
+
+
+
+
+body.dark{
+background:#0f172a;
+color:white;
+}
+
+body.dark .navbar{
+background:rgba(20,20,25,0.8);
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+body.dark .page-wrapper{
+background:#1e293b;
+color:white;
+}
+
+body.dark p{
+color:#cbd5e1;
+}
+
+body.dark .card-1,
+body.dark .card-2{
+background:#334155;
+}
+
+body.dark .hero{
+background:linear-gradient(135deg,#0f172a,#1e293b);
+}
+
