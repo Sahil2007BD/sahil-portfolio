@@ -47,8 +47,11 @@ html, body{
 }
 
 .nav-links{
-    display:flex;
-    gap:25px;
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background:white;
 }
 
 .nav-links a{
@@ -339,6 +342,50 @@ font-size:38px;
 
 .hero p{
 font-size:16px;
+}
+
+}
+
+/* Menu Bar for mobile */
+
+
+.menu-toggle{
+display:none;
+font-size:26px;
+cursor:pointer;
+}
+
+@media (max-width:900px){
+
+.menu-toggle{
+display:block;
+}
+
+.nav-links a{
+margin-left:0;
+}
+
+.nav-links{
+position:absolute;
+top:60px;
+left:0;
+width:100%;
+background:white;
+
+display:none;
+flex-direction:column;
+align-items:center;
+
+padding:20px 0;
+z-index:1000;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.nav-links li{
+margin:10px 0;
 }
 
 }
