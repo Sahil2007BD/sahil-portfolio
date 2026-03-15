@@ -47,11 +47,10 @@ html, body{
 }
 
 .nav-links{
-    position:absolute;
-    top:100%;
-    left:0;
-    width:100%;
-    background:white;
+    display:flex;
+    gap:25px;
+    align-items:center;
+    list-style:none;
 }
 
 .nav-links a{
@@ -77,6 +76,10 @@ html, body{
 .nav-links a:hover::after{
     width:100%;
 }
+    .nav-links a,
+    .nav-links a:hover{
+    text-decoration:none;
+    }
 
 /* HERO */
 
@@ -92,7 +95,7 @@ html, body{
     padding:120px 20px 80px 20px;
 
     width:100%;
-
+    
     background:linear-gradient(135deg,#eef2f7,#f8fafc);
 }
 
@@ -124,7 +127,10 @@ html, body{
     gap:15px;
     justify-content:center;
 }
-
+    .hero a,
+    .hero a:hover{
+    text-decoration:none;
+    }
 /* BUTTONS */
 
 .btn{
@@ -358,11 +364,15 @@ cursor:pointer;
 @media (max-width:900px){
 
 .menu-toggle{
-display:block;
+display:none;
+font-size:26px;
+cursor:pointer;
 }
 
-.nav-links a{
-margin-left:0;
+@media (max-width:900px){
+
+.menu-toggle{
+display:block;
 }
 
 .nav-links{
@@ -372,20 +382,26 @@ left:0;
 width:100%;
 background:white;
 
-display:none;
 flex-direction:column;
 align-items:center;
 
-padding:20px 0;
-z-index:1000;
+overflow:hidden;
+max-height:0;
+
+transition:max-height 0.35s ease;
+
+padding:0;
 }
 
 .nav-links.active{
-display:flex;
+max-height:300px;
+padding:20px 0;
 }
 
 .nav-links li{
 margin:10px 0;
+}
+
 }
 
 }
