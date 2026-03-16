@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
 // ---------------- TYPING EFFECT ----------------
 
 const texts = [
-"Future Software Developer",
-"Web Developer",
-"CSE Student"
+"Future Software Developer ",
+"Web Developer ",
+"CSE Student "
 ];
 
 let textIndex = 0;
@@ -305,8 +305,67 @@ requestAnimationFrame(animateParticles);
 animateParticles();
 
 
+//jsmail
+const card = document.querySelector(".contact-card");
+
+card.addEventListener("mousemove",(e)=>{
+
+const rect = card.getBoundingClientRect();
+
+const x = e.clientX - rect.left;
+const y = e.clientY - rect.top;
+
+const centerX = rect.width / 2;
+const centerY = rect.height / 2;
+
+const rotateX = (y - centerY) / 50;
+const rotateY = (centerX - x) / 50;
+
+card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+
+});
+
+card.addEventListener("mouseleave",()=>{
+card.style.transform = "rotateX(0) rotateY(0)";
+});
 
 
+// CONTACT FORM SUBMISSION
+const form = document.querySelector(".contact-form");
+const message = document.getElementById("form-message");
+
+form.addEventListener("submit", async function(e){
+
+e.preventDefault();
+
+const data = new FormData(form);
+
+try{
+
+await fetch(form.action,{
+method: form.method,
+body: data,
+headers:{
+'Accept':'application/json'
+}
+});
+
+message.classList.remove("hidden");
+
+setTimeout(()=>{
+message.classList.add("hidden");
+},3000);
+
+form.reset();
+
+}catch(error){
+
+message.textContent = "❌ Something went wrong.";
+message.classList.remove("hidden");
+
+}
+
+});
 
 
 

@@ -650,3 +650,295 @@ width:100%;
 height:100%;
 z-index: 0;
 }
+
+
+
+
+
+
+/* Contact Form */
+.social-links{
+display:flex;
+gap:18px;
+margin-top:10px;
+}
+
+.social-links a{
+font-size:26px;
+color:#3b6cff;
+transition:all 0.3s ease;
+}
+
+.social-links a:hover{
+color:white;
+transform:translateY(-3px) scale(1.15);
+
+text-shadow:
+0 0 10px #3b6cff,
+0 0 20px #3b6cff;
+}
+
+.social-links{
+display:flex;
+gap:18px;
+margin-top:10px;
+}
+
+.icon{
+position:relative;
+font-size:26px;
+color:#3b6cff;
+transition:0.3s;
+}
+
+.icon:hover{
+transform:translateY(-4px) scale(1.1);
+color:white;
+
+text-shadow:
+0 0 10px #3b6cff,
+0 0 20px #3b6cff;
+}
+
+.tooltip{
+position:absolute;
+bottom:35px;
+left:50%;
+transform:translateX(-50%);
+background:#111827;
+color:white;
+padding:5px 10px;
+border-radius:6px;
+font-size:12px;
+
+opacity:0;
+pointer-events:none;
+transition:0.25s;
+white-space:nowrap;
+}
+
+.icon:hover .tooltip{
+opacity:1;
+bottom:45px;
+}
+
+.input-group{
+position:relative;
+margin-bottom:20px;
+}
+
+
+.input-group input,
+.input-group textarea{
+width:100%;
+padding:14px 12px;
+border:1px solid rgba(255,255,255,0.2);
+border-radius:8px;
+background:transparent;
+color:inherit;
+font-size:14px;
+}
+
+.input-group label{
+position:absolute;
+left:12px;
+top:14px;
+color:#6b7280;
+font-size:14px;
+pointer-events:none;
+transition:0.25s ease;
+}
+body.dark .input-group label{
+background:#1e293b;
+color:#9ca3af;
+}
+
+/* move label up when typing */
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group textarea:focus + label,
+.input-group textarea:not(:placeholder-shown) + label{
+top:-8px;
+left:10px;
+font-size:12px;
+color:#3b82f6;
+background:white;
+padding:0 6px;
+border-radius:4px;
+}
+
+body.dark .input-group input:focus + label,
+body.dark .input-group input:not(:placeholder-shown) + label,
+body.dark .input-group textarea:focus + label,
+body.dark .input-group textarea:not(:placeholder-shown) + label{
+background:#1e293b;
+}
+
+.success-message{
+display:none;
+margin-top:10px;
+color:#22c55e;
+font-weight:500;
+}
+
+.hidden{
+display:none;
+}
+
+
+
+.contact-section{
+max-width:1000px;
+margin:100px auto;
+padding:40px;
+
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
+
+border-radius:14px;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,0.35),
+0 0 20px rgba(59,108,255,0.2);
+}
+
+.contact-container{
+display:flex;
+gap:40px;
+margin-top:30px;
+justify-content:space-between;
+}
+
+.contact-info{
+width:40%;
+text-align:left;
+}
+
+.contact-form{
+width:60%;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+padding:12px;
+border-radius:8px;
+border:1px solid #ccc;
+font-size:14px;
+}
+
+.contact-form button{
+padding:12px;
+border:none;
+background:#3b6cff;
+color:white;
+border-radius:8px;
+cursor:pointer;
+font-weight:500;
+transition:0.25s ease;
+}
+
+.contact-form button:hover{
+transform:translateY(-2px);
+box-shadow:0 10px 25px rgba(59,130,246,0.5); 
+}
+
+
+.contact-social a{
+margin-right:12px;
+color:#3b6cff;
+font-weight:500;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+outline:none;
+border:1px solid #3b82f6;
+
+box-shadow:
+0 0 8px rgba(59,130,246,0.5),
+0 0 18px rgba(59,130,246,0.2);
+}
+
+.contact-card{
+transition:transform 0.2s ease;
+transform-style:preserve-3d;
+}
+
+
+
+
+
+
+
+
+
+.whatsapp-float{
+position:fixed;
+bottom:25px;
+right:25px;
+width:55px;
+height:55px;
+
+background:#25D366;
+color:white;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:28px;
+border-radius:50%;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
+z-index:1000;
+
+transition:all 0.3s ease;
+}
+
+.whatsapp-float:hover{
+text-decoration: none;
+transform:scale(1.1);
+box-shadow:
+0 0 10px #25D366,
+0 0 25px #25D366;
+}
+
+
+
+
+
+
+/* footer */
+.footer{
+text-align:center;
+margin-top:80px;
+padding:25px;
+
+border-top:1px solid rgba(255,255,255,0.1);
+color:#9ca3af;
+font-size:14px;
+}
+
+.footer-socials{
+margin-top:10px;
+}
+
+.footer-socials a{
+margin:0 10px;
+font-size:20px;
+color:#60a5fa;
+transition:0.3s;
+}
+
+.footer-socials a:hover{
+color:white;
+transform:scale(1.2);
+
+text-shadow:
+0 0 10px #3b82f6,
+0 0 20px #3b82f6;
+}
