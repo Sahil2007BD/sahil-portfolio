@@ -2,20 +2,27 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+This project is a personal portfolio website maintained by the repository owner.
+Only the latest version available in this repository is currently supported with updates and fixes.
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+| Version       | Supported |
+| --------------| --------- |
+| Latest        | ✅        |
+| Older versions| ❌        |
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+If you discover a security vulnerability in this project, please report it responsibly.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+You can report issues through:
+
+* Opening a **GitHub Issue** in this repository
+* Contacting me through my **GitHub profile**
+
+When reporting a vulnerability, please include:
+
+* A clear description of the issue
+* Steps to reproduce the problem
+* Any screenshots or proof of concept if possible
+
+I will review the report and respond as soon as possible. Thank you for helping improve the security of this project.
