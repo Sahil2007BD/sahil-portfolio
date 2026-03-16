@@ -209,12 +209,102 @@ showPage();
 
 const glow = document.querySelector(".cursor-glow");
 
-document.addEventListener("mousemove", (e) => {
+let mouseX = 0;
+let mouseY = 0;
 
-glow.style.left = e.clientX + "px";
-glow.style.top = e.clientY + "px";
+let glowX = 0;
+let glowY = 0;
+
+document.addEventListener("mousemove",(e)=>{
+
+mouseX = e.clientX + window.scrollX;
+mouseY = e.clientY + window.scrollY;
 
 });
+
+function animateGlow(){
+
+glowX += (mouseX - glowX) * 0.08;
+glowY += (mouseY - glowY) * 0.08;
+
+glow.style.left = glowX + "px";
+glow.style.top = glowY + "px";
+
+requestAnimationFrame(animateGlow);
+
+}
+
+animateGlow();
+
+// CARD 3D HOVER EFFECT
+
+const cards = document.querySelectorAll(".card-1, .card-2");
+
+cards.forEach(card => {
+
+card.addEventListener("mousemove", (e)=>{
+
+const rect = card.getBoundingClientRect();
+const x = e.clientX - rect.left;
+const y = e.clientY - rect.top;
+
+const centerX = rect.width / 2;
+const centerY = rect.height / 2;
+
+const rotateX = (y - centerY) / 10;
+const rotateY = (centerX - x) / 10;
+
+card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
+
+});
+
+card.addEventListener("mouseleave", ()=>{
+card.style.transform = "rotateX(0) rotateY(0) scale(1)";
+});
+
+});
+
+// PARTICLE BACKGROUND
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+
+for(let i=0;i<80;i++){
+particles.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+size:Math.random()*2,
+speedX:(Math.random()-0.5)*0.5,
+speedY:(Math.random()-0.5)*0.5
+});
+}
+
+function animateParticles(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+particles.forEach(p=>{
+
+p.x+=p.speedX;
+p.y+=p.speedY;
+
+ctx.beginPath();
+ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
+ctx.fillStyle="rgba(59,108,255,0.5)";
+ctx.fill();
+
+});
+
+requestAnimationFrame(animateParticles);
+}
+
+animateParticles();
+
+
 
 
 
